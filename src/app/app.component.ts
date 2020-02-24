@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BestScoreManager } from './app.storage.service';
 import { CONTROLS, COLORS, BOARD_SIZE, GAME_MODES } from './app.constants';
+import  data  from  './data.json';
 
 @Component({
   selector: 'ngx-snake',
@@ -11,6 +12,10 @@ import { CONTROLS, COLORS, BOARD_SIZE, GAME_MODES } from './app.constants';
   }
 })
 export class AppComponent {
+
+ public imageData:{src:string, id:string}[] = data; 
+
+ 
   private interval: number;
   private tempDirection: number;
   private default_mode = 'classic';
